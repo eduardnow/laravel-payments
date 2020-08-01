@@ -15,6 +15,8 @@ class CreatePaymentGatewaysTable extends Migration
     {
         Schema::create('payment_gateways', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 50);
+            $table->string('image');
             $table->timestamps();
         });
     }
