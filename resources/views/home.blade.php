@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Make a payment') }}</div>
 
                     <div class="card-body">
-                        <form action="#" method="POST" id="paymentForm">
+                        <form action="{{ route('payment.pay') }}" method="POST" id="paymentForm">
                             @csrf
 
                             <div class="row">
@@ -16,7 +16,7 @@
                                     <label for="value">How much you want to pay?</label>
                                     <input type="number" id="value" min="5" step="0.01" name="value"
                                            class="form-control"
-                                           value="{{ mt_rand(500, 100000) /100  }}"/>
+                                           value="{{ mt_rand(500, 100000) /100  }}" required/>
                                     <small class="form-text text-muted">
                                         Use values with up to two decimal positions, using dot "."
                                     </small>

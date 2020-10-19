@@ -24,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/payment/pay', 'PaymentController@pay')->name('payment.pay');
+Route::get('/payment/approval', 'PaymentController@approval')->name('payment.approval');
+Route::get('/payment/cancelled', 'PaymentController@cancelled')->name('payment.cancelled');
